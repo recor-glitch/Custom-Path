@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hero_animation/constants.dart';
+import 'package:hero_animation/custom_paint.dart';
+import 'package:hero_animation/path_anim.dart';
 import 'package:hero_animation/product_detail.dart';
 import 'package:hero_animation/product_model.dart';
-
-import 'custom_paint.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,16 +18,7 @@ class Home extends StatelessWidget {
           children: [
             Stack(
               children: [
-                ClipPath(
-                    clipper: CustomCurve(),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.3,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('assets/bg.jpg'))),
-                    )),
+                PathAnim(),
               ],
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.02),

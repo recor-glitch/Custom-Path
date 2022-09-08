@@ -1,6 +1,12 @@
 import 'package:flutter/cupertino.dart';
 
 class CustomCurve extends CustomClipper<Path> {
+  final BuildContext context;
+  final double curve1_height, curve2_height;
+  CustomCurve(
+      {required this.context,
+      required this.curve1_height,
+      required this.curve2_height});
   // @override
   // void paint(Canvas canvas, Size size) {
   //   var _paint = Paint()
